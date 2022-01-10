@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(28, 0, 70, 1) 88%
+  );
+  font-family: "Raleway";
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+nav > ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #1c0046;
+  padding: 10px 20px;
+}
+
+a {
+  text-align: center;
+  width: 100px;
+}
+.dropdown a {
+  background-color: #1c0046;
+}
+ul.dropdown-1 {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transform-origin: top;
+  transform: translateY(-20px) scale(0.7);
+  transition: all 0.2s ease-in;
+  z-index: -1000;
+}
+ul li:hover .dropdown-1 {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-2 {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.3s ease-out;
+}
+
+.dropdown li:hover .dropdown-2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scalex(1);
+}
+a {
+  transition: 0.3s ease;
+}
+a:hover {
+  background-color: #050331;
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.fas {
+  position: relative;
+  top: -2px;
+  left: 15px;
+  font-size: 10px;
+}
+
+.banner-left {
+  flex: 1;
+}
+.banner-right {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.banner-right img {
+  /* width: 90%;
+  height: 90%; */
+  border: 4px solid #22bedd;
+  object-fit: cover;
+}
+
+.banner-title {
+  white-space: nowrap;
+  position: relative;
+  font-size: 48px;
+  color: transparent;
+}
+
+.banner-title:before {
+  opacity: 1;
+  position: absolute;
+  content: "Programming Hero|";
+  left: 0;
+  color: #22bedd;
+  animation: typing 4s ease-in infinite;
+}
+
+.banner p {
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.love-btn {
+  padding: 10px 20px;
+  background: #22bedd;
+  color: #fff;
+  border: 4px solid #22bedd;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+.love-btn:hover {
+  background: #000;
+}
+
+@keyframes typing {
+  0% {
+    content: "P|";
+  }
+
+  3% {
+    content: "Pr|";
+  }
+
+  6% {
+    content: "Pro|";
+  }
+
+  9% {
+    content: "Prog|";
+  }
+  12% {
+    content: "Progr|";
+  }
+  15% {
+    content: "Progra|";
+  }
+  18% {
+    content: "Program|";
+  }
+  21% {
+    content: "Programm|";
+  }
+  24% {
+    content: "Programmi|";
+  }
+  27% {
+    content: "Programmin|";
+  }
+  30% {
+    content: "Programming|";
+  }
+  33% {
+    content: "Programming |";
+  }
+  37% {
+    content: "Programming H|";
+  }
+  40% {
+    content: "Programming He|";
+  }
+  43% {
+    content: "Programming Her|";
+  }
+  46% {
+    content: "Programming Hero|";
+  }
+  47% {
+    content: "Programming Hero|";
+  }
+
+  80% {
+    content: "Programming Her|";
+  }
+  81% {
+    content: "Programming He|";
+  }
+  82% {
+    content: "Programming H|";
+  }
+  83% {
+    content: "Programming |";
+  }
+  84% {
+    content: "Programming|";
+  }
+  85% {
+    content: "Programmin|";
+  }
+  86% {
+    content: "Programmi|";
+  }
+  87% {
+    content: "Programm|";
+  }
+  88% {
+    content: "Program|";
+  }
+  89% {
+    content: "Progra|";
+  }
+  90% {
+    content: "Progr|";
+  }
+  91% {
+    content: "Prog|";
+  }
+  92% {
+    content: "Pro|";
+  }
+  93% {
+    content: "Pr|";
+  }
+  94% {
+    content: "P|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-section h3 {
+  font-size: 30px;
+  border-left: 4px solid #22bedd;
+  border-right: 4px solid #22bedd;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 0.9;
+  color: #63e5ff;
+}
+
+.gallery {
+  /* text-align: center; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery .photo {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.border {
+  position: absolute;
+  background: #fff;
+  transition: all 0.5s linear;
+}
+.border-top {
+  top: 5px;
+  right: 100%;
+  width: 270px;
+  height: 2px;
+}
+.border-right {
+  bottom: 100%;
+  right: 5px;
+  width: 2px;
+  height: 270px;
+}
+.border-bottom {
+  bottom: 5px;
+  left: 100%;
+  width: 270px;
+  height: 2px;
+}
+.border-left {
+  top: 100%;
+  left: 5px;
+  width: 2px;
+  height: 270px;
+}
+
+.photo:hover .border-top {
+  right: 5px;
+}
+
+.photo:hover .border-right {
+  bottom: 5px;
+}
+.photo:hover .border-bottom {
+  left: 5px;
+}
+.photo:hover .border-left {
+  top: 5px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: background 0.3s linear;
+  width: 100%;
+  height: 100%;
+}
+
+.photo:hover::before {
+  background: #000000a1;
+}
+
+figcaption {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  transition: 0.3s linear 0.1s;
+}
+
+.photo:hover figcaption {
+  top: 70%;
+}
