@@ -6,14 +6,22 @@ function showNav() {
 function hideNav() {
   nav.classList.add("hide-nav");
 }
-
 let arr = [];
+
+function isScrollDown() {
+  return arr[arr.length - 2] < arr[arr.length - 1];
+}
+
+function isScrollUp() {
+  return arr[arr.length - 2] > arr[arr.length - 1];
+}
+
 document.addEventListener("scroll", (e) => {
   arr.push(window.scrollY);
 
-  if (arr[arr.length - 2] > arr[arr.length - 1]) {
+  if (isScrollUp()) {
     showNav();
-  } else if (arr[arr.length - 2] < arr[arr.length - 1]) {
+  } else if (isScrollDown()) {
     hideNav();
   }
 });
