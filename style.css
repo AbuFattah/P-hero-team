@@ -25,7 +25,7 @@ nav {
   position: fixed;
   left: 50%;
   /* top: -100%; */
-  top: 0;
+  top: 10px;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ nav {
   transform: translateX(-50%) translateY(0);
 }
 .hide-nav {
-  transform: translateX(-50%) translateY(-100%);
+  transform: translateX(-50%) translateY(-150%);
 }
 
 nav > ul {
